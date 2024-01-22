@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="tmp" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>tmp</text>
+    </name>
+    <page id="n0">
+      <place id="p3">
+        <name>
+          <text>p3</text>
+        </name>
+      </place>
+      <place id="p0">
+        <name>
+          <text>p0</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="p2">
+        <name>
+          <text>p2</text>
+        </name>
+      </place>
+      <place id="p4">
+        <name>
+          <text>p4</text>
+        </name>
+      </place>
+      <place id="p1">
+        <name>
+          <text>p1</text>
+        </name>
+      </place>
+      <place id="p5">
+        <name>
+          <text>p5</text>
+        </name>
+      </place>
+      <transition id="t0">
+        <name>
+          <text>t0</text>
+        </name>
+      </transition>
+      <transition id="t2">
+        <name>
+          <text>t2</text>
+        </name>
+      </transition>
+      <transition id="t3">
+        <name>
+          <text>t3</text>
+        </name>
+      </transition>
+      <transition id="t1">
+        <name>
+          <text>t1</text>
+        </name>
+      </transition>
+      <transition id="t4">
+        <name>
+          <text>t4</text>
+        </name>
+      </transition>
+      <transition id="t5">
+        <name>
+          <text>t5</text>
+        </name>
+      </transition>
+      <transition id="t6">
+        <name>
+          <text>t6</text>
+        </name>
+      </transition>
+      <arc id="2595542685184" source="t5" target="p5"/>
+      <arc id="2595542684176" source="t3" target="p2"/>
+      <arc id="2595542684560" source="p1" target="t5"/>
+      <arc id="2595542683408" source="p0" target="t1"/>
+      <arc id="2595542683792" source="t2" target="p1"/>
+      <arc id="2595542685088" source="t5" target="p4"/>
+      <arc id="2595542685472" source="t6" target="p5"/>
+      <arc id="2595542684464" source="t4" target="p2"/>
+      <arc id="2595542683312" source="t0" target="p2"/>
+      <arc id="2595542683696" source="p0" target="t2"/>
+      <arc id="2595542684848" source="p2" target="t6"/>
+      <arc id="2595542684080" source="t3" target="p1"/>
+      <arc id="2595542684992" source="t5" target="p3"/>
+      <arc id="2595542685376" source="t6" target="p4"/>
+      <arc id="2595542684368" source="t4" target="p1"/>
+      <arc id="2595542683216" source="t0" target="p1"/>
+      <arc id="2595542683600" source="t1" target="p2"/>
+      <arc id="2595542683984" source="p0" target="t3"/>
+      <arc id="2595542684752" source="p2" target="t5"/>
+      <arc id="2595542685280" source="t6" target="p3"/>
+      <arc id="2595542684272" source="p0" target="t4"/>
+      <arc id="2595542684656" source="p1" target="t6"/>
+      <arc id="2595542683120" source="p0" target="t0"/>
+      <arc id="2595542683504" source="t1" target="p1"/>
+      <arc id="2595542683888" source="t2" target="p2"/>
+    </page>
+  </net>
+</pnml>

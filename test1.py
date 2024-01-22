@@ -25,9 +25,9 @@ if __name__ == "__main__":
     initial_marking = Marking()
     # initial_marking[p0] = 1
 
-    pm4py.write_pnml(net, initial_marking, None, "net.pnml")
+    pm4py.write_pnml(net, initial_marking, None, "nets/net.pnml")
 
-    # pm4py.view_petri_net(net, initial_marking)
+    pm4py.view_petri_net(net, initial_marking)
 
     # tran = transformator.Transformator(net)
     # tran.rule_a1(p1, p2)
@@ -38,8 +38,8 @@ if __name__ == "__main__":
 
     trans.rule_a3(transitions[3])
 
-    pm4py.view_petri_net(net)
+    # pm4py.view_petri_net(net)
 
     trans.restore_rule()
 
-    pm4py.view_petri_net(net)
+    # pm4py.view_petri_net(net)

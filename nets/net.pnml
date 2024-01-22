@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="tmp" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>tmp</text>
+    </name>
+    <page id="n0">
+      <place id="p0">
+        <name>
+          <text>p0</text>
+        </name>
+      </place>
+      <place id="p1">
+        <name>
+          <text>p1</text>
+        </name>
+      </place>
+      <transition id="t0">
+        <name>
+          <text>t0</text>
+        </name>
+      </transition>
+      <transition id="t3">
+        <name>
+          <text>t3</text>
+        </name>
+      </transition>
+      <transition id="t4">
+        <name>
+          <text>t4</text>
+        </name>
+      </transition>
+      <transition id="t2">
+        <name>
+          <text>t2</text>
+        </name>
+      </transition>
+      <transition id="t5">
+        <name>
+          <text>t5</text>
+        </name>
+      </transition>
+      <transition id="t6">
+        <name>
+          <text>t6</text>
+        </name>
+      </transition>
+      <transition id="t1">
+        <name>
+          <text>t1</text>
+        </name>
+      </transition>
+      <arc id="1785897500576" source="t0" target="p0"/>
+      <arc id="1785897763072" source="p1" target="t4"/>
+      <arc id="1785897762880" source="t1" target="p0"/>
+      <arc id="1785897763168" source="p1" target="t5"/>
+      <arc id="1785897762976" source="t2" target="p0"/>
+      <arc id="1785897763264" source="p1" target="t6"/>
+      <arc id="1785897763360" source="p0" target="t3"/>
+      <arc id="1785897763456" source="t3" target="p1"/>
+    </page>
+  </net>
+</pnml>

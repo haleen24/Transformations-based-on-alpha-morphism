@@ -15,7 +15,7 @@ class Transformator:
             'a4': self.restore_rule_a4,
         }
 
-    def rule_a1(self, p1: PetriNet.Place, p2: PetriNet.Place) -> None:
+    def rule_a1(self, p1: PetriNet.Place, p2: PetriNet.Place) -> bool:
         """
         Place Simplification\n
         p1, p2: pm4py.PetriNet.Place\n
@@ -25,11 +25,14 @@ class Transformator:
 
         net = self.petri_net
 
+        if p1 not in net.places or p2 not in net.places:
+            return False
+
         # if *p1 != *p2 or p1* != p2*
         if set(i.source for i in p1.in_arcs) != set(i.source for i in p2.in_arcs):
-            return
+            return False
         elif set(i.target for i in p1.out_arcs) != set(i.target for i in p2.out_arcs):
-            return
+            return False
 
         # logging for roll back
         self.logger.add_log(TransformationLog(p1.name, p2.name, 'a1'))
@@ -37,9 +40,9 @@ class Transformator:
         # removing place
         pm4py.objects.petri_net.utils.petri_utils.remove_place(net, p2)
 
-        return
+        return True
 
-    def rule_a2(self, t1: pm4py.PetriNet.Transition, t2: pm4py.PetriNet.Transition):
+    def rule_a2(self, t1: pm4py.PetriNet.Transition, t2: pm4py.PetriNet.Transition) -> bool:
         """
         Transition Simplification\n
         t1, t2: pm4py.PetriNet.Transition\n
@@ -49,11 +52,14 @@ class Transformator:
 
         net = self.petri_net
 
+        if t1 not in net.transitions or t2 not in net.transitions:
+            return False
+
         # if *p1 != *p2 or p1* != p2*
         if set(i.source for i in t1.in_arcs) != set(i.source for i in t2.in_arcs):
-            return
+            return False
         elif set(i.target for i in t1.out_arcs) != set(i.target for i in t2.out_arcs):
-            return
+            return False
 
         # logging for roll back
         self.logger.add_log(TransformationLog(t1.name, t2.name, 'a2'))
@@ -61,26 +67,30 @@ class Transformator:
         # removing transition
         pm4py.objects.petri_net.utils.petri_utils.remove_transition(net, t2)
 
-        return
+        return True
 
-    def rule_a3(self, t: pm4py.PetriNet.Transition):
+    def rule_a3(self, t: pm4py.PetriNet.Transition) -> bool:
+
+        net = self.petri_net
+
+        if t not in net.transitions:
+            return False
+
         if not (len(t.in_arcs) == len(t.out_arcs) == 1):
-            return
+            return False
         p1: pm4py.PetriNet.Place = list(t.in_arcs)[0].source
         p2: pm4py.PetriNet.Place = list(t.out_arcs)[0].target
 
         if not (len(p1.out_arcs) == len(p2.in_arcs) == 1):
-            return
+            return False
 
         if p1.in_arcs is [] or p2.out_arcs is []:
-            return
+            return False
 
         if set(p1.in_arcs) & set(p2.out_arcs) != set():
-            return
+            return False
 
         self.logger.add_log(TransformationLog(p1.name, p2.name, 'a3', [t.name]))
-
-        net = self.petri_net
 
         for i in p2.out_arcs:
             pm4py.objects.petri_net.utils.petri_utils.add_arc_from_to(p1, i.target, net)
@@ -88,9 +98,9 @@ class Transformator:
         pm4py.objects.petri_net.utils.petri_utils.remove_transition(net, t)
         pm4py.objects.petri_net.utils.petri_utils.remove_place(net, p2)
 
-        return
+        return True
 
-    def rule_a4(self, p1: PetriNet.Place, p2: PetriNet.Place, initial_marking):
+    def rule_a4(self, p1: PetriNet.Place, p2: PetriNet.Place, initial_marking=None) -> bool:
 
         """
         Postset-Empty Place Simplification\n
@@ -101,19 +111,22 @@ class Transformator:
 
         net = self.petri_net
 
+        if p1 not in net.places or p2 not in net.places:
+            return False
+
         if p1.out_arcs != set() != p2.out_arcs:
-            return
+            return False
 
         if p1.in_arcs & p2.in_arcs != set():
-            return
+            return False
 
         for s_component in pm4py.objects.petri_net.utils.petri_utils.get_s_components_from_petri(net, initial_marking,
                                                                                                  pm4py.Marking()):
-            if len(s_component) == 1:
+            if not any(place.out_arcs == [] for place in s_component):
                 continue
 
             if not ((p1.name in s_component) == (p2.name in s_component)):
-                return
+                return False
 
         in_arcs = p2.in_arcs
 
@@ -124,7 +137,7 @@ class Transformator:
 
         pm4py.objects.petri_net.utils.petri_utils.remove_place(net, p2)
 
-        return
+        return True
 
     def restore_rule(self):
 

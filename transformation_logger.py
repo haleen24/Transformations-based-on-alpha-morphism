@@ -1,3 +1,4 @@
+import os.path
 import pickle
 
 import pm4py.objects.petri_net.utils.petri_utils
@@ -14,7 +15,7 @@ class TransformationLogger:
         self.__save()
 
     def __save(self):
-        self.paths.append(f'{self.logs[-1].saved_name}.pkl')
+        self.paths.append(os.path.join('logs', f'{self.logs[-1].saved_name}.pkl'))
         with open(self.paths[-1], 'wb') as file:
             pickle.dump(self.logs[-1], file)
 
