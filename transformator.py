@@ -5,10 +5,10 @@ from transformation_logger import TransformationLog
 
 
 class Transformator:
-    def __init__(self, net):
+    def __init__(self, net, workdir=None):
         self.petri_net = net
-        self.logger = TransformationLogger()
-        self.__restore_functions = {
+        self.logger = TransformationLogger() if workdir is None else TransformationLogger(workdir)
+        self._restore_functions = {
             'a1': self.restore_rule_a1,
             'a2': self.restore_rule_a2,
             'a3': self.restore_rule_a3,
@@ -102,15 +102,16 @@ class Transformator:
 
     @classmethod
     def _get_s_component(cls, net, initial_marking, final_marking, recursion_depth=20):
-        s_component = \
+        wrong_s_components_list = \
             pm4py.objects.petri_net.utils.petri_utils.get_s_components_from_petri(net,
                                                                                   initial_marking,
                                                                                   final_marking,
                                                                                   max_rec_depth=recursion_depth)
-        print(s_component)
-        return [component for component in s_component if
-                not any(another_component.issuperset(component) and another_component is not component for
-                        another_component in s_component)]
+        # return s_component
+        return [component for component in wrong_s_components_list if
+                all(not component.issubset(another_component) or component
+                    is another_component
+                    for another_component in wrong_s_components_list)]
 
     def rule_a4(self, p1: PetriNet.Place, p2: PetriNet.Place, initial_marking=None, final_marking=None) -> bool:
         """
@@ -153,7 +154,7 @@ class Transformator:
         if tl is None:
             return False
 
-        self.__restore_functions[tl.type](tl)
+        self._restore_functions[tl.type](tl)
 
         return True
 

@@ -10,6 +10,4 @@ if __name__ == '__main__':
         marking2[i] = 1
 
     trans = transformator.Transformator(net)
-    print(trans._get_s_component(net, dict(), dict()))
-    # morphism_manager.PetriNetMorphismManager.start_transformations(net, marking1, marking2)
-    # print(marking1, marking2)
+    morphism_manager.PetriNetMorphismManager.start_transformations(net, marking1, marking2)
