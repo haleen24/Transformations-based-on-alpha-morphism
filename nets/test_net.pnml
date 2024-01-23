@@ -18,6 +18,11 @@
           <text>1</text>
         </initialMarking>
       </place>
+      <place id="p1">
+        <name>
+          <text>p1</text>
+        </name>
+      </place>
       <place id="p2">
         <name>
           <text>p2</text>
@@ -28,11 +33,6 @@
           <text>p4</text>
         </name>
       </place>
-      <place id="p1">
-        <name>
-          <text>p1</text>
-        </name>
-      </place>
       <place id="p5">
         <name>
           <text>p5</text>
@@ -41,11 +41,6 @@
       <transition id="t0">
         <name>
           <text>t0</text>
-        </name>
-      </transition>
-      <transition id="t2">
-        <name>
-          <text>t2</text>
         </name>
       </transition>
       <transition id="t3">
@@ -63,6 +58,11 @@
           <text>t4</text>
         </name>
       </transition>
+      <transition id="t2">
+        <name>
+          <text>t2</text>
+        </name>
+      </transition>
       <transition id="t5">
         <name>
           <text>t5</text>
@@ -73,31 +73,31 @@
           <text>t6</text>
         </name>
       </transition>
-      <arc id="2595542685184" source="t5" target="p5"/>
-      <arc id="2595542684176" source="t3" target="p2"/>
-      <arc id="2595542684560" source="p1" target="t5"/>
-      <arc id="2595542683408" source="p0" target="t1"/>
-      <arc id="2595542683792" source="t2" target="p1"/>
-      <arc id="2595542685088" source="t5" target="p4"/>
-      <arc id="2595542685472" source="t6" target="p5"/>
-      <arc id="2595542684464" source="t4" target="p2"/>
-      <arc id="2595542683312" source="t0" target="p2"/>
-      <arc id="2595542683696" source="p0" target="t2"/>
-      <arc id="2595542684848" source="p2" target="t6"/>
-      <arc id="2595542684080" source="t3" target="p1"/>
-      <arc id="2595542684992" source="t5" target="p3"/>
-      <arc id="2595542685376" source="t6" target="p4"/>
-      <arc id="2595542684368" source="t4" target="p1"/>
-      <arc id="2595542683216" source="t0" target="p1"/>
-      <arc id="2595542683600" source="t1" target="p2"/>
-      <arc id="2595542683984" source="p0" target="t3"/>
-      <arc id="2595542684752" source="p2" target="t5"/>
-      <arc id="2595542685280" source="t6" target="p3"/>
-      <arc id="2595542684272" source="p0" target="t4"/>
-      <arc id="2595542684656" source="p1" target="t6"/>
-      <arc id="2595542683120" source="p0" target="t0"/>
-      <arc id="2595542683504" source="t1" target="p1"/>
-      <arc id="2595542683888" source="t2" target="p2"/>
+      <arc id="139702287438736" source="p1" target="t5"/>
+      <arc id="139702287439120" source="t1" target="p1"/>
+      <arc id="139702287439504" source="t2" target="p2"/>
+      <arc id="139702287439888" source="p0" target="t4"/>
+      <arc id="139702287440656" source="t5" target="p4"/>
+      <arc id="139702287441040" source="t6" target="p5"/>
+      <arc id="139702287440416" source="p2" target="t6"/>
+      <arc id="139702287439792" source="t3" target="p2"/>
+      <arc id="139702287439024" source="p0" target="t1"/>
+      <arc id="139702287439408" source="t2" target="p1"/>
+      <arc id="139702287440560" source="t5" target="p3"/>
+      <arc id="139702287440944" source="t6" target="p4"/>
+      <arc id="139702287440320" source="p2" target="t5"/>
+      <arc id="139702287439696" source="t3" target="p1"/>
+      <arc id="139702287440080" source="t4" target="p2"/>
+      <arc id="139702287438928" source="t0" target="p2"/>
+      <arc id="139702287439312" source="p0" target="t2"/>
+      <arc id="139702287440848" source="t6" target="p3"/>
+      <arc id="139702287440224" source="p1" target="t6"/>
+      <arc id="139702287438064" source="p0" target="t0"/>
+      <arc id="139702287438832" source="t0" target="p1"/>
+      <arc id="139702287439216" source="t1" target="p2"/>
+      <arc id="139702287439600" source="p0" target="t3"/>
+      <arc id="139702287439984" source="t4" target="p1"/>
+      <arc id="139702287440752" source="t5" target="p5"/>
     </page>
   </net>
 </pnml>

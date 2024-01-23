@@ -100,15 +100,25 @@ class Transformator:
 
         return True
 
-    def rule_a4(self, p1: PetriNet.Place, p2: PetriNet.Place, initial_marking=None) -> bool:
+    @classmethod
+    def _get_s_component(cls, net, initial_marking, final_marking, recursion_depth=20):
+        s_component = \
+            pm4py.objects.petri_net.utils.petri_utils.get_s_components_from_petri(net,
+                                                                                  initial_marking,
+                                                                                  final_marking,
+                                                                                  max_rec_depth=recursion_depth)
+        print(s_component)
+        return [component for component in s_component if
+                not any(another_component.issuperset(component) and another_component is not component for
+                        another_component in s_component)]
 
+    def rule_a4(self, p1: PetriNet.Place, p2: PetriNet.Place, initial_marking=None, final_marking=None) -> bool:
         """
         Postset-Empty Place Simplification\n
         p1, p2: pm4py.PetriNet.Place\n
         p1 will be saved\n
         p2 will be destroyed\n
         """
-
         net = self.petri_net
 
         if p1 not in net.places or p2 not in net.places:
@@ -120,10 +130,7 @@ class Transformator:
         if p1.in_arcs & p2.in_arcs != set():
             return False
 
-        for s_component in pm4py.objects.petri_net.utils.petri_utils.get_s_components_from_petri(net, initial_marking,
-                                                                                                 pm4py.Marking()):
-            if not any(place.out_arcs == [] for place in s_component):
-                continue
+        for s_component in self._get_s_component(net, initial_marking, final_marking):
 
             if not ((p1.name in s_component) == (p2.name in s_component)):
                 return False

@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
     pm4py.write_pnml(net, initial_marking, None, "nets/test_net.pnml")
 
-    # pm4py.view_petri_net(net, initial_marking)
+    pm4py.view_petri_net(net, initial_marking)
 
     trans = transformator.Transformator(net)
 

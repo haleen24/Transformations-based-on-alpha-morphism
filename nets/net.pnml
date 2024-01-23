@@ -50,14 +50,14 @@
           <text>t1</text>
         </name>
       </transition>
-      <arc id="1785897500576" source="t0" target="p0"/>
-      <arc id="1785897763072" source="p1" target="t4"/>
-      <arc id="1785897762880" source="t1" target="p0"/>
-      <arc id="1785897763168" source="p1" target="t5"/>
-      <arc id="1785897762976" source="t2" target="p0"/>
-      <arc id="1785897763264" source="p1" target="t6"/>
-      <arc id="1785897763360" source="p0" target="t3"/>
-      <arc id="1785897763456" source="t3" target="p1"/>
+      <arc id="140675322363808" source="t0" target="p0"/>
+      <arc id="140675322659552" source="t1" target="p0"/>
+      <arc id="140675322659648" source="t2" target="p0"/>
+      <arc id="140675322659456" source="p1" target="t4"/>
+      <arc id="140675322659840" source="p1" target="t5"/>
+      <arc id="140675322659936" source="p1" target="t6"/>
+      <arc id="140675322659744" source="p0" target="t3"/>
+      <arc id="140675322660080" source="t3" target="p1"/>
     </page>
   </net>
 </pnml>

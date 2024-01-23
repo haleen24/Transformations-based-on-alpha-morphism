@@ -31,7 +31,7 @@ class PetriNetMorphismManager:
         return transformations
 
     @classmethod
-    def start_transformations(cls, net, initial_marking=None):
+    def start_transformations(cls, net, initial_marking=None, final_marking=None):
         cls.transformator = Transformator(net)
         flag = True
         transformations = cls.get_transformations(net)
@@ -48,7 +48,7 @@ class PetriNetMorphismManager:
             for transition in transformations.rule_a3_list:
                 flag += cls.transformator.rule_a3(transition)
             for places in transformations.rule_a4_list:
-                flag += cls.transformator.rule_a4(places[0], places[1], initial_marking)
+                flag += cls.transformator.rule_a4(places[0], places[1], initial_marking, final_marking)
             transformations = cls.get_transformations(net)
             pm4py.view_petri_net(net, [], [])
 
