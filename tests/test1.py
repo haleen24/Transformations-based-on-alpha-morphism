@@ -1,5 +1,6 @@
 import pm4py
 from pm4py import Marking
+import os
 
 import transformator
 
@@ -25,7 +26,7 @@ if __name__ == "__main__":
     initial_marking = Marking()
     # initial_marking[p0] = 1
 
-    pm4py.write_pnml(net, initial_marking, None, "nets/net.pnml")
+    pm4py.write_pnml(net, initial_marking, None, os.path.join("nets", "net.pnml"))
 
     pm4py.view_petri_net(net, initial_marking)
 

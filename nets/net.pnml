@@ -20,11 +20,6 @@
           <text>t0</text>
         </name>
       </transition>
-      <transition id="t3">
-        <name>
-          <text>t3</text>
-        </name>
-      </transition>
       <transition id="t4">
         <name>
           <text>t4</text>
@@ -33,6 +28,16 @@
       <transition id="t2">
         <name>
           <text>t2</text>
+        </name>
+      </transition>
+      <transition id="t3">
+        <name>
+          <text>t3</text>
+        </name>
+      </transition>
+      <transition id="t1">
+        <name>
+          <text>t1</text>
         </name>
       </transition>
       <transition id="t5">
@@ -45,19 +50,14 @@
           <text>t6</text>
         </name>
       </transition>
-      <transition id="t1">
-        <name>
-          <text>t1</text>
-        </name>
-      </transition>
-      <arc id="140675322363808" source="t0" target="p0"/>
-      <arc id="140675322659552" source="t1" target="p0"/>
-      <arc id="140675322659648" source="t2" target="p0"/>
-      <arc id="140675322659456" source="p1" target="t4"/>
-      <arc id="140675322659840" source="p1" target="t5"/>
-      <arc id="140675322659936" source="p1" target="t6"/>
-      <arc id="140675322659744" source="p0" target="t3"/>
-      <arc id="140675322660080" source="t3" target="p1"/>
+      <arc id="139737561516928" source="t3" target="p1"/>
+      <arc id="139737561515440" source="t0" target="p0"/>
+      <arc id="139737561516304" source="p1" target="t4"/>
+      <arc id="139737561516400" source="t1" target="p0"/>
+      <arc id="139737561516688" source="p1" target="t5"/>
+      <arc id="139737561516496" source="t2" target="p0"/>
+      <arc id="139737561516784" source="p1" target="t6"/>
+      <arc id="139737561516592" source="p0" target="t3"/>
     </page>
   </net>
 </pnml>

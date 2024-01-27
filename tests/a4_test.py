@@ -30,9 +30,7 @@ if __name__ == "__main__":
 
     trans = transformator.Transformator(net)
 
-
-
-    trans.rule_a4(places[1], places[2], initial_marking)
+    trans.rule_a4(places[1], places[2], initial_marking, [])
 
     pm4py.view_petri_net(net, initial_marking)
 

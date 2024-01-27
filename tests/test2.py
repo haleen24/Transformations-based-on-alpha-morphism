@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
     trans.rule_a3(transitions[0])
 
-    trans.rule_a4(places[3], places[4], initial_marking)
+    trans.rule_a4(places[3], places[4], initial_marking, [])
 
     pm4py.view_petri_net(net, initial_marking)
 

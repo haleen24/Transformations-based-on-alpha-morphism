@@ -107,7 +107,7 @@ class Transformator:
                                                                                   initial_marking,
                                                                                   final_marking,
                                                                                   max_rec_depth=recursion_depth)
-        # return s_component
+        # return s_components
         return [component for component in wrong_s_components_list if
                 all(not component.issubset(another_component) or component
                     is another_component
@@ -121,6 +121,9 @@ class Transformator:
         p2 will be destroyed\n
         """
         net = self.petri_net
+
+        initial_marking = initial_marking if initial_marking is not None else []
+        final_marking = final_marking if final_marking is not None else []
 
         if p1 not in net.places or p2 not in net.places:
             return False
