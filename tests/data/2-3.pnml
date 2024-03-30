@@ -1,0 +1,1117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="imported_1711632525.6381047" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>imported_1711632525.6381047</text>
+    </name>
+    <page id="n0">
+      <place id="p12">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="610.0" y="70.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p15">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="880.0" y="190.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p25">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1060.0" y="10.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p21">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="990.0" y="260.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p29">
+        <name>
+          <text>
+          </text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+        <graphics>
+          <position x="10.0" y="650.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p3">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="150.0" y="130.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p7">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="570.0" y="130.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p32">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="330.0" y="550.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p36">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="690.0" y="540.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p39">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="850.0" y="640.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p46">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1010.0" y="580.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p43">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1170.0" y="690.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p47">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1160.0" y="580.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p14">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="740.0" y="10.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p16">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="880.0" y="120.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p19">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="850.0" y="260.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p22">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1130.0" y="290.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p26">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1080.0" y="70.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p2">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="140.0" y="30.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p6">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="380.0" y="160.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p30">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="160.0" y="550.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p33">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="321.0" y="650.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p37">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="680.0" y="640.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p40">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="850.0" y="730.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p50">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1180.0" y="500.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p51">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="530.0" y="380.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p44">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="860.0" y="500.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p11">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="600.0" y="10.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p13">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="730.0" y="70.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p17">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1030.0" y="150.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p23">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1240.0" y="200.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p27">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1250.0" y="30.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p1">
+        <name>
+          <text>
+          </text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+        <graphics>
+          <position x="0.0" y="70.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p5">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="440.0" y="30.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p9">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="700.0" y="140.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p34">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="500.0" y="540.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p38">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="670.0" y="730.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p48">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1020.0" y="440.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p52">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="680.0" y="350.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p45">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="850.0" y="580.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p10">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="700.0" y="240.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p18">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="820.0" y="310.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p24">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="880.0" y="40.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p20">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="990.0" y="330.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p28">
+        <name>
+          <text>
+          </text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+        <graphics>
+          <position x="10.0" y="550.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p4">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="300.0" y="80.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p8">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="570.0" y="210.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p31">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="160.0" y="650.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p35">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="512.0" y="661.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p41">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1000.0" y="640.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p49">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1020.0" y="520.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <place id="p42">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1010.0" y="740.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </place>
+      <transition id="t1">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="70.0" y="30.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t5">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="370.0" y="80.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t9">
+        <name>
+          <text>t9</text>
+        </name>
+        <graphics>
+          <position x="620.0" y="240.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="556fcbae-15d6-4679-ad2b-d03cc38fc4f7"/>
+      </transition>
+      <transition id="t13">
+        <name>
+          <text>b!</text>
+        </name>
+        <graphics>
+          <position x="800.0" y="30.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t17">
+        <name>
+          <text>t17</text>
+        </name>
+        <graphics>
+          <position x="950.0" y="120.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="23a50db8-6a2c-4198-b69a-0b57b4725607"/>
+      </transition>
+      <transition id="t22">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1060.0" y="290.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t26">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="940.0" y="10.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t32">
+        <name>
+          <text>t32</text>
+        </name>
+        <graphics>
+          <position x="250.0" y="550.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="28885dbc-5c67-473f-a2df-41c432063dd9"/>
+      </transition>
+      <transition id="t36">
+        <name>
+          <text>a?</text>
+        </name>
+        <graphics>
+          <position x="760.0" y="540.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t39">
+        <name>
+          <text>b?_1</text>
+        </name>
+        <graphics>
+          <position x="750.0" y="640.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t42">
+        <name>
+          <text>t42</text>
+        </name>
+        <graphics>
+          <position x="920.0" y="730.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="7cb5cc0b-45e1-41d8-a4f3-8f29df7eaa70"/>
+      </transition>
+      <transition id="t46">
+        <name>
+          <text>q14</text>
+        </name>
+        <graphics>
+          <position x="1090.0" y="580.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t50">
+        <name>
+          <text>q18</text>
+        </name>
+        <graphics>
+          <position x="1102.0" y="520.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t4">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="230.0" y="130.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t8">
+        <name>
+          <text>t8</text>
+        </name>
+        <graphics>
+          <position x="640.0" y="140.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="e0b3cd40-6a82-4fd7-95a2-4a9032f3f826"/>
+      </transition>
+      <transition id="t11">
+        <name>
+          <text>t11</text>
+        </name>
+        <graphics>
+          <position x="680.0" y="10.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="b8e45f59-0f2c-4a52-9f8a-50e89612ee4f"/>
+      </transition>
+      <transition id="t18">
+        <name>
+          <text>t18</text>
+        </name>
+        <graphics>
+          <position x="950.0" y="190.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="e8915144-97ea-4b5d-89e7-a62ecbf9e407"/>
+      </transition>
+      <transition id="t20">
+        <name>
+          <text>t20</text>
+        </name>
+        <graphics>
+          <position x="910.0" y="330.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="28b82eef-6f2d-436a-9a6e-7f051f925419"/>
+      </transition>
+      <transition id="t27">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="980.0" y="70.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t30">
+        <name>
+          <text>t30</text>
+        </name>
+        <graphics>
+          <position x="90.0" y="550.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="cebf1f6b-647c-443a-99ab-80cd93614264"/>
+      </transition>
+      <transition id="t33">
+        <name>
+          <text>t33</text>
+        </name>
+        <graphics>
+          <position x="260.0" y="650.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="b43ebf27-a3c4-4d42-9272-564bc0d7809b"/>
+      </transition>
+      <transition id="t37">
+        <name>
+          <text>q7</text>
+        </name>
+        <graphics>
+          <position x="590.0" y="640.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t43">
+        <name>
+          <text>q11</text>
+        </name>
+        <graphics>
+          <position x="1070.0" y="650.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t47">
+        <name>
+          <text>t47</text>
+        </name>
+        <graphics>
+          <position x="943.0" y="437.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="b7107fbe-e427-45f3-93af-37ccacdae932"/>
+      </transition>
+      <transition id="t3">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="220.0" y="30.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t7">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="510.0" y="130.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t12">
+        <name>
+          <text>t12</text>
+        </name>
+        <graphics>
+          <position x="670.0" y="70.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="aec6e034-7362-484a-9a5b-e439ed05a818"/>
+      </transition>
+      <transition id="t15">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="820.0" y="120.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t21">
+        <name>
+          <text>t21</text>
+        </name>
+        <graphics>
+          <position x="920.0" y="260.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="8ab36701-4d51-4748-8539-79595f0b26bb"/>
+      </transition>
+      <transition id="t24">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1100.0" y="160.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t28">
+        <name>
+          <text>t28</text>
+        </name>
+        <graphics>
+          <position x="1140.0" y="10.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="7b53db97-0963-43d9-946f-4860bf58ec6c"/>
+      </transition>
+      <transition id="t34">
+        <name>
+          <text>q5</text>
+        </name>
+        <graphics>
+          <position x="430.0" y="590.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t38">
+        <name>
+          <text>q8</text>
+        </name>
+        <graphics>
+          <position x="570.0" y="730.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t40">
+        <name>
+          <text>b?_2</text>
+        </name>
+        <graphics>
+          <position x="740.0" y="730.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t44">
+        <name>
+          <text>q12</text>
+        </name>
+        <graphics>
+          <position x="1080.0" y="740.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t48">
+        <name>
+          <text>t48</text>
+        </name>
+        <graphics>
+          <position x="950.0" y="520.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="20b0ccd2-e557-4049-ba64-ae56f4b20b0d"/>
+      </transition>
+      <transition id="t2">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="70.0" y="130.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t6">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="470.0" y="220.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t10">
+        <name>
+          <text>t10</text>
+        </name>
+        <graphics>
+          <position x="520.0" y="30.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="75683922-a912-4957-ad3a-5d3ff5453584"/>
+      </transition>
+      <transition id="t19">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="770.0" y="250.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t16">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="790.0" y="180.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t25">
+        <name>
+          <text>
+          </text>
+        </name>
+        <graphics>
+          <position x="1190.0" y="280.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <transition id="t29">
+        <name>
+          <text>t29</text>
+        </name>
+        <graphics>
+          <position x="1150.0" y="70.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="64359f92-a1b1-436e-a2ee-1d278fce809b"/>
+      </transition>
+      <transition id="t31">
+        <name>
+          <text>t31</text>
+        </name>
+        <graphics>
+          <position x="80.0" y="650.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="5164209f-87ba-4f43-93e7-2c911650f049"/>
+      </transition>
+      <transition id="t35">
+        <name>
+          <text>t35</text>
+        </name>
+        <graphics>
+          <position x="610.0" y="538.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="896020bb-f779-41e3-aa9f-2b5a126b0841"/>
+      </transition>
+      <transition id="t41">
+        <name>
+          <text>t41</text>
+        </name>
+        <graphics>
+          <position x="920.0" y="640.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="8cae4aaf-5f51-4bf0-972d-ec35110f53ea"/>
+      </transition>
+      <transition id="t45">
+        <name>
+          <text>t45</text>
+        </name>
+        <graphics>
+          <position x="950.0" y="580.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="1d2fc3f7-8740-4e9c-9b33-402434d36b51"/>
+      </transition>
+      <transition id="t49">
+        <name>
+          <text>q17</text>
+        </name>
+        <graphics>
+          <position x="1103.0" y="440.0"/>
+          <dimension x="40.0" y="40.0"/>
+        </graphics>
+      </transition>
+      <arc id="2506025117696" source="p41" target="t43"/>
+      <arc id="2506025119232" source="p6" target="t7"/>
+      <arc id="2506025120768" source="p13" target="t13"/>
+      <arc id="2506025122304" source="p21" target="t22"/>
+      <arc id="2506025255936" source="t48" target="p49"/>
+      <arc id="2506025257472" source="p4" target="t5"/>
+      <arc id="2506025123360" source="t26" target="p25"/>
+      <arc id="2506025117216" source="t39" target="p39"/>
+      <arc id="2506025118752" source="t45" target="p46"/>
+      <arc id="2506025120288" source="p12" target="t12"/>
+      <arc id="2506025121824" source="t19" target="p19"/>
+      <arc id="2506025255456" source="p28" target="t30"/>
+      <arc id="2506025256992" source="t2" target="p3"/>
+      <arc id="2506025122880" source="t13" target="p24"/>
+      <arc id="2506025116736" source="p35" target="t38"/>
+      <arc id="2506025118272" source="p45" target="t45"/>
+      <arc id="2506025119808" source="t9" target="p10"/>
+      <arc id="2506025121344" source="p16" target="t17"/>
+      <arc id="2506025254976" source="p49" target="t50"/>
+      <arc id="2506025256512" source="p31" target="t33"/>
+      <arc id="2506025258048" source="p34" target="t35"/>
+      <arc id="2506025120864" source="p9" target="t16"/>
+      <arc id="2506025122400" source="t22" target="p22"/>
+      <arc id="2506025117792" source="t13" target="p52"/>
+      <arc id="2506025119328" source="p6" target="t6"/>
+      <arc id="2506025256032" source="p29" target="t31"/>
+      <arc id="2506025257568" source="p33" target="t34"/>
+      <arc id="2506025117312" source="p40" target="t42"/>
+      <arc id="2506025118848" source="t5" target="p6"/>
+      <arc id="2506025120384" source="p11" target="t11"/>
+      <arc id="2506025121920" source="p19" target="t21"/>
+      <arc id="2506025123456" source="p26" target="t29"/>
+      <arc id="2506025255552" source="p44" target="t48"/>
+      <arc id="2506025257088" source="p2" target="t3"/>
+      <arc id="2506025122976" source="t25" target="p23"/>
+      <arc id="2506025116832" source="t38" target="p38"/>
+      <arc id="2506025118368" source="p52" target="t39"/>
+      <arc id="2506025119904" source="t8" target="p9"/>
+      <arc id="2506025121440" source="t18" target="p17"/>
+      <arc id="2506025255072" source="t50" target="p50"/>
+      <arc id="2506025256608" source="t33" target="p33"/>
+      <arc id="2506025122496" source="p20" target="t22"/>
+      <arc id="2506025117888" source="t43" target="p43"/>
+      <arc id="2506025119424" source="t6" target="p8"/>
+      <arc id="2506025120960" source="p9" target="t15"/>
+      <arc id="2506025256128" source="p48" target="t49"/>
+      <arc id="2506025257664" source="p32" target="t34"/>
+      <arc id="2506025122016" source="p18" target="t20"/>
+      <arc id="2506025123552" source="p25" target="t28"/>
+      <arc id="2506025117408" source="p39" target="t41"/>
+      <arc id="2506025118944" source="p44" target="t47"/>
+      <arc id="2506025120480" source="t11" target="p14"/>
+      <arc id="2506025255648" source="t29" target="p27"/>
+      <arc id="2506025257184" source="p3" target="t4"/>
+      <arc id="2506025116928" source="p38" target="t40"/>
+      <arc id="2506025118464" source="t36" target="p45"/>
+      <arc id="2506025120000" source="p5" target="t10"/>
+      <arc id="2506025121536" source="t17" target="p17"/>
+      <arc id="2506025123072" source="p24" target="t27"/>
+      <arc id="2506025255168" source="t28" target="p27"/>
+      <arc id="2506025256704" source="p1" target="t1"/>
+      <arc id="2506025116448" source="p35" target="t37"/>
+      <arc id="2506025117984" source="p42" target="t44"/>
+      <arc id="2506025119520" source="t7" target="p7"/>
+      <arc id="2506025121056" source="t15" target="p16"/>
+      <arc id="2506025122592" source="p17" target="t24"/>
+      <arc id="2506025256224" source="p30" target="t32"/>
+      <arc id="2506025257760" source="t34" target="p35"/>
+      <arc id="2506025122112" source="t21" target="p21"/>
+      <arc id="2506025123648" source="t8" target="p51"/>
+      <arc id="2506025117504" source="t42" target="p42"/>
+      <arc id="2506025119040" source="t5" target="p5"/>
+      <arc id="2506025120576" source="t12" target="p13"/>
+      <arc id="2506025255744" source="t47" target="p48"/>
+      <arc id="2506025257280" source="t3" target="p4"/>
+      <arc id="2506025121632" source="t19" target="p18"/>
+      <arc id="2506025123168" source="p24" target="t26"/>
+      <arc id="2506025117024" source="p37" target="t39"/>
+      <arc id="2506025118560" source="p52" target="t40"/>
+      <arc id="2506025120096" source="t10" target="p12"/>
+      <arc id="2506025255264" source="t49" target="p50"/>
+      <arc id="2506025256800" source="p1" target="t2"/>
+      <arc id="2506025116544" source="p36" target="t36"/>
+      <arc id="2506025118080" source="t36" target="p44"/>
+      <arc id="2506025119616" source="p8" target="t9"/>
+      <arc id="2506025121152" source="t16" target="p15"/>
+      <arc id="2506025122688" source="t24" target="p23"/>
+      <arc id="2506025256320" source="t31" target="p31"/>
+      <arc id="2506025257856" source="t34" target="p34"/>
+      <arc id="2506025123744" source="p51" target="t36"/>
+      <arc id="2506025117600" source="t41" target="p41"/>
+      <arc id="2506025119136" source="t46" target="p47"/>
+      <arc id="2506025120672" source="p14" target="t13"/>
+      <arc id="2506025122208" source="t20" target="p20"/>
+      <arc id="2506025255840" source="t30" target="p30"/>
+      <arc id="2506025257376" source="t4" target="p4"/>
+      <arc id="2506025123264" source="t27" target="p26"/>
+      <arc id="2506025117120" source="t40" target="p40"/>
+      <arc id="2506025118656" source="p46" target="t46"/>
+      <arc id="2506025120192" source="t10" target="p11"/>
+      <arc id="2506025121728" source="p10" target="t19"/>
+      <arc id="2506025255360" source="t9" target="p51"/>
+      <arc id="2506025256896" source="t1" target="p2"/>
+      <arc id="2506025121248" source="p15" target="t18"/>
+      <arc id="2506025116640" source="t37" target="p37"/>
+      <arc id="2506025118176" source="t44" target="p43"/>
+      <arc id="2506025119712" source="p7" target="t8"/>
+      <arc id="2506025122784" source="p22" target="t25"/>
+      <arc id="2506025256416" source="t32" target="p32"/>
+      <arc id="2506025257952" source="t35" target="p36"/>
+    </page>
+  </net>
+</pnml>

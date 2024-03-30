@@ -1,3 +1,5 @@
+import sys
+
 import pm4py.objects.petri_net.utils.petri_utils
 from pm4py import PetriNet
 from transformation_logger import TransformationLogger
@@ -15,7 +17,7 @@ class Transformator:
             'a4': self.restore_rule_a4,
         }
 
-    def rule_a1(self, p1: PetriNet.Place, p2: PetriNet.Place) -> bool:
+    def rule_a1(self, p1: PetriNet.Place, p2: PetriNet.Place, im: pm4py.Marking = None) -> bool:
         """
         Place Simplification\n
         p1, p2: pm4py.PetriNet.Place\n
@@ -39,6 +41,9 @@ class Transformator:
 
         # removing place
         pm4py.objects.petri_net.utils.petri_utils.remove_place(net, p2)
+
+        if im is not None and p1 in im and p2 in im:
+            im.pop(p2)
 
         return True
 
@@ -69,7 +74,7 @@ class Transformator:
 
         return True
 
-    def rule_a3(self, t: pm4py.PetriNet.Transition) -> bool:
+    def rule_a3(self, t: pm4py.PetriNet.Transition, im: pm4py.Marking = None) -> bool:
 
         net = self.petri_net
 
@@ -84,13 +89,21 @@ class Transformator:
         if not (len(p1.out_arcs) == len(p2.in_arcs) == 1):
             return False
 
-        if p1.in_arcs is [] or p2.out_arcs is []:
+        if p2.out_arcs == set():
             return False
 
         if set(p1.in_arcs) & set(p2.out_arcs) != set():
             return False
 
-        self.logger.add_log(TransformationLog(p1.name, p2.name, 'a3', [t.name]))
+        data = [t.name]
+        if im is not None:
+            if im[p1] == 1:
+                data.append('p1')
+            if im[p2] == 2:
+                data.append('p2')
+                im[p1] = 1
+
+        self.logger.add_log(TransformationLog(p1.name, p2.name, 'a3', data))
 
         for i in p2.out_arcs:
             pm4py.objects.petri_net.utils.petri_utils.add_arc_from_to(p1, i.target, net)
@@ -101,12 +114,16 @@ class Transformator:
         return True
 
     @classmethod
-    def _get_s_component(cls, net, initial_marking, final_marking, recursion_depth=20):
-        wrong_s_components_list = \
-            pm4py.objects.petri_net.utils.petri_utils.get_s_components_from_petri(net,
-                                                                                  initial_marking,
-                                                                                  final_marking,
-                                                                                  max_rec_depth=recursion_depth)
+    def _get_s_component(cls, net, initial_marking, final_marking, recursion_depth=sys.maxsize):
+        wrong_s_components_list = []
+        for i in initial_marking:
+            marking = pm4py.Marking()
+            marking[i] = 1
+            wrong_s_components_list += \
+                pm4py.objects.petri_net.utils.petri_utils.get_s_components_from_petri(net,
+                                                                                      marking,
+                                                                                      final_marking,
+                                                                                      max_rec_depth=recursion_depth)
         # return s_components
         return [component for component in wrong_s_components_list if
                 all(not component.issubset(another_component) or component
@@ -134,7 +151,8 @@ class Transformator:
         if p1.in_arcs & p2.in_arcs != set():
             return False
 
-        for s_component in self._get_s_component(net, initial_marking, final_marking):
+        s_components = self._get_s_component(net, initial_marking, final_marking)
+        for s_component in s_components:
 
             if not ((p1.name in s_component) == (p2.name in s_component)):
                 return False
@@ -161,7 +179,7 @@ class Transformator:
 
         return True
 
-    def restore_rule_a1(self, tl):
+    def restore_rule_a1(self, tl, im: pm4py.Marking = None):
 
         net = self.petri_net
 
@@ -173,6 +191,9 @@ class Transformator:
             pm4py.objects.petri_net.utils.petri_utils.add_arc_from_to(i.source, restored_place, net)
         for i in key_place.out_arcs:
             pm4py.objects.petri_net.utils.petri_utils.add_arc_from_to(restored_place, i.target, net)
+
+        if im is not None and im[key_place] == 1:
+            im[restored_place] = 1
 
         return
 
@@ -192,7 +213,7 @@ class Transformator:
 
         return
 
-    def restore_rule_a3(self, tl):
+    def restore_rule_a3(self, tl, im: pm4py.Marking = None):
 
         net = self.petri_net
 
@@ -219,6 +240,12 @@ class Transformator:
         # link p1 and transition
         pm4py.objects.petri_net.utils.petri_utils.add_arc_from_to(key_place, t, net)
 
+        if im is not None:
+            im[key_place] = 0
+            if 'p1' in tl.data:
+                im[key_place] = 1
+            if 'p2' in tl.data:
+                im[p2] = 1
         return
 
     def restore_rule_a4(self, tl):

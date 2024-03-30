@@ -1,6 +1,5 @@
 import os.path
 import pickle
-import pm4py.objects.petri_net.utils.petri_utils
 import shutil
 
 
