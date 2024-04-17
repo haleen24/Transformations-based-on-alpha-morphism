@@ -4,10 +4,11 @@ from os.path import join
 import pm4py
 from pm4py import Marking
 import morphism_manager
+import transformator
 from tests.test import view_net
 
 directory = "data"
-file = "1-1.pnml"
+file = "12-1.pnml"
 
 if __name__ == "__main__":
     net, marking, _ = pm4py.read_pnml(join(directory, file))
@@ -84,3 +85,15 @@ if __name__ == "__main__":
             marking = Marking()
             for i in [j for j in net.places if len(j.in_arcs) == 0]:
                 marking[i] = 1
+        if command == 11:
+            trans: transformator.Transformator = transformator.Transformator(net)
+            s_components = trans.get_s_components(marking)
+            print(len(net.places), len(net.transitions), len(s_components))
+            j = min(s_components, key=lambda x: len(x))
+            print(j)
+            print("-----------")
+            net_tmp, marking_tmp = morphism_manager.PetriNetMorphismManager.deep_net_copy(net, marking)
+            morphism_manager.PetriNetMorphismManager.start_transformations(net_tmp, marking_tmp, display=command == 3)
+            trans = transformator.Transformator(net_tmp)
+            s_components = trans.get_s_components(marking_tmp)
+            print(len(net_tmp.places), len(net_tmp.transitions), len(s_components),s_components)

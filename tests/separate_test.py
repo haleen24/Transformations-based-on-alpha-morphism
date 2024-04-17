@@ -6,7 +6,7 @@ from tests.test import check, view_net
 
 test_path = "data"
 answer_path = "results"
-source = "1-1.pnml"
+source = "2-3.pnml"
 
 if __name__ == "__main__":
     net, marking, _ = pm4py.read_pnml(join(test_path, source))
@@ -14,9 +14,10 @@ if __name__ == "__main__":
     view_net(net)
     view_net(net_result)
     print(
-        "test_name/isomorphism/alphamorphism----------------",
-        check(net, marking, net_result, marking_result, morphism_manager.PetriNetMorphismManager.check_isomorphism),
-        check(net, marking, net_result, marking_result,
-              morphism_manager.PetriNetMorphismManager.check_alphamorphism),
-        "----------------"
+        "isomorphism: ",
+        morphism_manager.PetriNetMorphismManager.check_isomorphism(net, marking, net_result, marking_result),
+        "\nalphamorphism: ",
+        morphism_manager.PetriNetMorphismManager.check_alphamorphism(net, marking, net_result, marking_result),
+        end=''
     )
+    view_net(net)

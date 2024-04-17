@@ -1,9 +1,12 @@
 import sys
+from functools import reduce
+from itertools import chain, product
 
 import pm4py.objects.petri_net.utils.petri_utils
-from pm4py import PetriNet
+from pm4py import PetriNet, Marking
 from transformation_logger import TransformationLogger
 from transformation_logger import TransformationLog
+from functools import cache
 
 
 class Transformator:
@@ -113,24 +116,39 @@ class Transformator:
 
         return True
 
-    @classmethod
-    def _get_s_component(cls, net, initial_marking, final_marking, recursion_depth=sys.maxsize):
-        wrong_s_components_list = []
-        for i in initial_marking:
-            marking = pm4py.Marking()
-            marking[i] = 1
-            wrong_s_components_list += \
-                pm4py.objects.petri_net.utils.petri_utils.get_s_components_from_petri(net,
-                                                                                      marking,
-                                                                                      final_marking,
-                                                                                      max_rec_depth=recursion_depth)
-        # return s_components
-        return [component for component in wrong_s_components_list if
-                all(not component.issubset(another_component) or component
-                    is another_component
-                    for another_component in wrong_s_components_list)]
+    # @classmethod
+    # def _get_s_component(cls, net, initial_marking, final_marking, recursion_depth=sys.maxsize):
+    #     wrong_s_components_list = []
+    #     for i in initial_marking:
+    #         marking = pm4py.Marking()
+    #         marking[i] = 1
+    #         wrong_s_components_list += \
+    #             pm4py.objects.petri_net.utils.petri_utils.get_s_components_from_petri(net,
+    #                                                                                   marking,
+    #                                                                                   final_marking,
+    #                                                                                   max_rec_depth=recursion_depth)
+    #     # return s_components
+    #     return [component for component in wrong_s_components_list if
+    #             all(not component.issubset(another_component) or component
+    #                 is another_component
+    #                 for another_component in wrong_s_components_list)]
 
-    def rule_a4(self, p1: PetriNet.Place, p2: PetriNet.Place, initial_marking=None, final_marking=None) -> bool:
+    @classmethod
+    def get_s_components(cls, marking: Marking):
+        result = set(frozenset(j) for j in chain.from_iterable(cls.get_s_component(i) for i in marking))
+        cls.get_s_component.cache_clear()
+        return result
+
+    @classmethod
+    @cache
+    def get_s_component(cls, element: pm4py.PetriNet.Place | pm4py.PetriNet.Transition) -> list[
+        set[pm4py.PetriNet.Place]]:
+        if isinstance(element, pm4py.PetriNet.Transition):
+            return list(chain.from_iterable(cls.get_s_component(i.target) for i in element.out_arcs))
+        return [reduce(lambda x, y: x | y, i, {element}) for i in
+                product(*[cls.get_s_component(i.target) for i in element.out_arcs])]
+
+    def rule_a4(self, p1: PetriNet.Place, p2: PetriNet.Place, initial_marking=None) -> bool:
         """
         Postset-Empty Place Simplification\n
         p1, p2: pm4py.PetriNet.Place\n
@@ -140,7 +158,6 @@ class Transformator:
         net = self.petri_net
 
         initial_marking = initial_marking if initial_marking is not None else []
-        final_marking = final_marking if final_marking is not None else []
 
         if p1 not in net.places or p2 not in net.places:
             return False
@@ -151,10 +168,10 @@ class Transformator:
         if p1.in_arcs & p2.in_arcs != set():
             return False
 
-        s_components = self._get_s_component(net, initial_marking, final_marking)
+        s_components = self.get_s_components(initial_marking)
         for s_component in s_components:
 
-            if not ((p1.name in s_component) == (p2.name in s_component)):
+            if not ((p1 in s_component) == (p2 in s_component)):
                 return False
 
         in_arcs = p2.in_arcs
@@ -169,7 +186,6 @@ class Transformator:
         return True
 
     def restore_rule(self):
-
         tl = self.logger.restore_rule()
 
         if tl is None:
@@ -180,7 +196,6 @@ class Transformator:
         return True
 
     def restore_rule_a1(self, tl, im: pm4py.Marking = None):
-
         net = self.petri_net
 
         key_place = [i for i in net.places if i.name == tl.key_name][0]
@@ -198,7 +213,6 @@ class Transformator:
         return
 
     def restore_rule_a2(self, tl):
-
         net = self.petri_net
 
         key_transition = [i for i in net.transitions if i.name == tl.key_name][0]
@@ -214,7 +228,6 @@ class Transformator:
         return
 
     def restore_rule_a3(self, tl, im: pm4py.Marking = None):
-
         net = self.petri_net
 
         key_place = [i for i in net.places if i.name == tl.key_name][0]  # find p1
@@ -249,7 +262,6 @@ class Transformator:
         return
 
     def restore_rule_a4(self, tl):
-
         net = self.petri_net
 
         # restore place_2

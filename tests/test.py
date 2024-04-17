@@ -53,14 +53,14 @@ if __name__ == "__main__":
         for test in zip(tests, answers):
             net, marking, _ = pm4py.read_pnml(join(test_path, test[0]))
             net_result, marking_result, _ = pm4py.read_pnml(join(answer_path, test[1]))
-            # print(
-            #     "test_name/isomorphism/alphamorphism----------------",
-            #     test[0],
-            #     check(net, marking, net_result, marking_result, morphism_manager.PetriNetMorphismManager.check_isomorphism),
-            #     check(net, marking, net_result, marking_result,
-            #           morphism_manager.PetriNetMorphismManager.check_alphamorphism),
-            #     "----------------"
-            # )
+            print(
+                "test_name/isomorphism/alphamorphism----------------",
+                test[0],
+                check(net, marking, net_result, marking_result, morphism_manager.PetriNetMorphismManager.check_isomorphism),
+                check(net, marking, net_result, marking_result,
+                      morphism_manager.PetriNetMorphismManager.check_alphamorphism),
+                "----------------"
+            )
             data = morphism_manager.PetriNetMorphismManager.start_transformations(net, marking)
             pnml = ".pnml"
             empty = ""

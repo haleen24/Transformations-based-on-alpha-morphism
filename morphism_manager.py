@@ -133,8 +133,7 @@ class PetriNetMorphismManager:
                 if a4_bad_elements[places[0]].intersection(
                         a4_bad_elements[places[1]]) or not cls._transformator.rule_a4(
                     places[0], places[1],
-                    initial_marking,
-                    final_marking):
+                    initial_marking):
                     a4_bad_elements[places[0]].add(places[1])
                     a4_bad_elements[places[1]].add(places[0])
                 else:
@@ -165,7 +164,7 @@ class PetriNetMorphismManager:
             # updates transformations
             transformations = cls.get_transformations(net)
 
-            # display3
+            # display
             view_net() if display and flag else None
 
             flag = False
