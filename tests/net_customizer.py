@@ -8,7 +8,7 @@ import transformator
 from tests.test import view_net
 
 directory = "data"
-file = "12-1.pnml"
+file = "1-1.pnml"
 
 if __name__ == "__main__":
     net, marking, _ = pm4py.read_pnml(join(directory, file))

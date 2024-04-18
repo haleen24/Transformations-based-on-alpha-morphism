@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="imported_1712916216.33772" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>imported_1712916216.33772</text>
+    </name>
+    <page id="n0">
+      <place id="n1">
+        <name>
+          <text>source 627</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+        <graphics>
+          <position x="11.25" y="11.25"/>
+          <dimension x="12.5" y="12.5"/>
+        </graphics>
+      </place>
+      <place id="n2">
+        <name>
+          <text>sink 628</text>
+        </name>
+        <graphics>
+          <position x="11.25" y="11.25"/>
+          <dimension x="12.5" y="12.5"/>
+        </graphics>
+      </place>
+      <place id="n13">
+        <name>
+          <text>sink 639</text>
+        </name>
+        <graphics>
+          <position x="11.25" y="11.25"/>
+          <dimension x="12.5" y="12.5"/>
+        </graphics>
+      </place>
+      <place id="n43">
+        <name>
+          <text>sink 669</text>
+        </name>
+        <graphics>
+          <position x="11.25" y="11.25"/>
+          <dimension x="12.5" y="12.5"/>
+        </graphics>
+      </place>
+      <place id="n58">
+        <name>
+          <text>sink 684</text>
+        </name>
+        <graphics>
+          <position x="11.25" y="11.25"/>
+          <dimension x="12.5" y="12.5"/>
+        </graphics>
+      </place>
+      <place id="n34">
+        <name>
+          <text>sink 660</text>
+        </name>
+        <graphics>
+          <position x="11.25" y="11.25"/>
+          <dimension x="12.5" y="12.5"/>
+        </graphics>
+      </place>
+      <transition id="n129">
+        <name>
+          <text>n129</text>
+        </name>
+        <graphics>
+          <position x="12.5" y="12.5"/>
+          <dimension x="15.0" y="15.0"/>
+        </graphics>
+      </transition>
+      <transition id="n138">
+        <name>
+          <text>n138</text>
+        </name>
+        <graphics>
+          <position x="12.5" y="12.5"/>
+          <dimension x="15.0" y="15.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="3e086ad8-46c2-485d-8e6d-7fa82cf02ddd"/>
+      </transition>
+      <transition id="n111">
+        <name>
+          <text>n111</text>
+        </name>
+        <graphics>
+          <position x="12.5" y="12.5"/>
+          <dimension x="15.0" y="15.0"/>
+        </graphics>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="b06a2438-0172-47b1-9257-c48c88e3487a"/>
+      </transition>
+      <transition id="n115">
+        <name>
+          <text>n115</text>
+        </name>
+        <graphics>
+          <position x="17.5" y="15.0"/>
+          <dimension x="25.0" y="20.0"/>
+        </graphics>
+      </transition>
+      <transition id="n84">
+        <name>
+          <text>n84</text>
+        </name>
+        <graphics>
+          <position x="17.5" y="15.0"/>
+          <dimension x="25.0" y="20.0"/>
+        </graphics>
+      </transition>
+      <transition id="n106">
+        <name>
+          <text>n106</text>
+        </name>
+        <graphics>
+          <position x="12.5" y="12.5"/>
+          <dimension x="15.0" y="15.0"/>
+        </graphics>
+      </transition>
+      <arc id="1937308760144" source="n1" target="n115"/>
+      <arc id="1937308754528" source="n58" target="n138"/>
+      <arc id="1937308657280" source="n111" target="n2"/>
+      <arc id="1937308755584" source="n1" target="n84"/>
+      <arc id="1937308760192" source="n43" target="n129"/>
+      <arc id="1937309022912" source="n129" target="n58"/>
+      <arc id="1937308753088" source="n13" target="n106"/>
+      <arc id="1937308657424" source="n84" target="n13"/>
+      <arc id="1937308760384" source="n34" target="n111"/>
+      <arc id="1937308651376" source="n106" target="n34"/>
+      <arc id="1937309080480" source="n138" target="n2"/>
+      <arc id="1937308658096" source="n115" target="n43"/>
+    </page>
+  </net>
+</pnml>
